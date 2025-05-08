@@ -1,0 +1,16 @@
+# Ignore big text files
+# The original corpus files are too large to be included in the repository.
+text/*.txt
+
+# Ignore large corpus files
+kyrgyz_clean_sentences.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
