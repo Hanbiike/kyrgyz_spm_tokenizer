@@ -52,6 +52,8 @@ Below is a list of all available tokenizer models in this project. Each model ha
 | kyrgyz_unigram_32000 | Unigram         | 32000      |
 | kyrgyz_unigram_51200 | Unigram         | 51200      |
 
+![Model diagram](graph.jpg)
+
 *(Each model above consists of a `.model` and `.vocab` pair with the given name.)*
 
 ## Usage
