@@ -68,9 +68,11 @@ Using these tokenizers is simple. Here are the steps to get started:
 4. Load and use the tokenizer – Use the SentencePiece Python API to load the model and tokenize text. Below is an example:
    ```python
    import sentencepiece as spm
+   import os
 
    # Load the SentencePiece model
-   sp = spm.SentencePieceProcessor(model_file="kyrgyz_bpe_4000.model")
+   sp = spm.SentencePieceProcessor()
+   sp.load(os.path.join("models", "kyrgyz_bpe_4000.model"))
 
    # Example Kyrgyz text to tokenize
    text = "Салам, дүйнө!"
@@ -81,7 +83,7 @@ Using these tokenizers is simple. Here are the steps to get started:
    # Tokens (str): ['▁', 'С', 'ал', 'ам', ',', '▁дүйнө', '!']
 
    tokens_id = sp.encode(text, out_type=int)
-   print("Токены (ID):", tokens_id)
+   print("Tokens (ID):", tokens_id)
    # Tokens (ID): [3930, 1, 27, 69, 7, 991, 8]
 
    # You can also decode tokens back to the original text
